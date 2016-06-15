@@ -9,3 +9,9 @@ leveldb 提供了接口进行compact (不需要修改leveldb源代码，也不�
       }
    
       db_tool 调用如下：./db_tool -cmd=compact -meta_db_path=/mnt/sdb/db_0601/
+
+迭代器源码分析：
+http://blog.csdn.net/sparkliang/article/details/11126741
+
+源码分析：
+http://blog.csdn.net/houzengjiang/article/details/7718548
