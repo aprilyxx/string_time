@@ -1,0 +1,11 @@
+//手动调用合并
+leveldb 提供了接口进行compact (不需要修改leveldb源代码，也不需要配置)。
+      接口定义如下：
+      virtual void CompactRange(const Slice* begin, const Slice* end) = 0; 
+ 
+      通过在db_tool 里添加命令，进行的调用：
+      void compact(leveldb::DB *db) {
+        db->CompactRange(NULL, NULL);
+      }
+   
+      db_tool 调用如下：./db_tool -cmd=compact -meta_db_path=/mnt/sdb/db_0601/
